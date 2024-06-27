@@ -1,0 +1,154 @@
+.image {
+  filter: blur(2px);
+  -webkit-filter: blur(3px);
+  height: 730px;
+  width: 1528px;
+  object-fit: cover;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.login {
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/opacity/see-through */
+  color: floralwhite;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  width: 80%;
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 140px  auto 0;
+
+}
+
+
+
+
+
+a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #007bff;
+}
+
+.form {
+  width: 300px;
+  margin: 0 auto;
+}
+
+
+
+
+
+
+/* inputs */
+/* Input container */
+.input-container {
+  position: relative;
+  margin: 20px;
+}
+
+/* Input field */
+.input-field {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+  background-color: transparent;
+  color: white;
+}
+
+/* Input label */
+.input-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 16px;
+  color: rgba(255, 251, 251, 0);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+/* Input highlight */
+.input-highlight {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: #007bff;
+  transition: all 0.3s ease;
+}
+
+/* Input field:focus styles */
+.input-field:focus + .input-label {
+  top: -20px;
+  font-size: 12px;
+  color: #007bff;
+}
+
+.input-field:focus + .input-label + .input-highlight {
+  width: 100%;
+}
+
+
+/* button */
+
+#bt {
+  width: 10em;
+  position: relative;
+  height: 3.5em;
+  border: 3px ridge #149CEA;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  transition: 1s;
+  border-radius: 0.3em;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#bt::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 3%;
+  width: 95%;
+  height: 10px;
+  background-color: #141d2d;
+  transition: 0.5s;
+  transform-origin: center;
+}
+
+#bt::before {
+  content: "";
+  transform-origin: center;
+  position: absolute;
+  top: 46px;
+  left: 5px;
+  width: 95%;
+  height: 10px;
+  background-color: #141e2e;
+  transition: 0.5s;
+}
+
+#bt:hover::before, #bt:hover::after {
+  transform: scale(0)
+}
+
+#bt:hover {
+  box-shadow: inset 0px 0px 25px #1479EA;
+}
